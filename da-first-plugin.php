@@ -100,5 +100,24 @@ register_activation_hook( __FILE__, array( $davidAragoFirstPlugin, 'activate' ) 
 
 //deactivation hook if the activate method is on the class itself.
 register_deactivation_hook( __FILE__, array( $davidAragoFirstPlugin, 'deactivate' ) );
+/*
+	
+	global $wpdb;
+	$query = "select * from da_elections_races where active=%d";
+	$results = $wpdb->get_results($wpdb->prepare($query, $some_parameters));
+	foreach ($results as $row)
+	{
+
+		echo $row->raceUniqueID;
+	}
+ 
+	global $wpdb;
+	$table = 'da_elections_races';
+	$data = array( 'raceTitle1' => 'Race 3', 'raceUniqueID' => 'RACE003' );
+	$format = array( '%s', '%d' );
+	$wpdb->insert( $table, $data, $format );
+	$my_id = $wpdb->insert_id;
+	
+ */
 
 
